@@ -1,22 +1,26 @@
-let max = 3
+
 function getComputerChoice(max){
   
-  if( Math.floor(Math.random() * max) <= 0 ){console.log("Rock")
+  if( Math.floor(Math.random() * max) == 0 ){console.log("Rock")
 
   }else if( Math.floor(Math.random() * max)>= 1){console.log("Paper")
 
-  }else {console.log("Scissors")
-
+  }else if( Math.floor(Math.random() * max) >= 2){console.log("Scissors")
+return;
 }}
-console.log(getComputerChoice())
+getComputerChoice(3);
 
 
-let humanChoice = prompt("Please choose Rock, Paper, Scissors","Make a choice!")
-function getHumanChoice(humanChoice){
-    if(humanChoice.toLowerCase === ("Rock").toLowerCase){console.log(humanChoice)
 
-    }else if (humanChoice.toLowerCase === ("Paper").toLowerCase){console.log("Paper")
+function getHumanChoice(){
+    let humanChoice = prompt("Please choose Rock, Paper, Scissors","Make a choice!");
+    if(humanChoice.toLowerCase() === ("rock")){console.log("Rock")
+
+    }else if (humanChoice.toLowerCase() === ("paper")){console.log("Paper")
     
-    }else{console.log("Scissors")}
+    }else if (humanChoice.toLowerCase() === ("scissors")){console.log("Scissors")
+
+    }else{getHumanChoice()}
 
 }
+getHumanChoice();
